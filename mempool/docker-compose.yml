@@ -19,6 +19,7 @@ services:
       NGINX_PORT: $APP_MEMPOOL_PORT
       NGINX_HOSTNAME: $APP_MEMPOOL_API_IP
       LIGHTNING_DETECTED_PORT: $APP_LIGHTNING_NODE_PORT
+      ACCELERATOR: true
     networks:
       default:
         ipv4_address: $APP_MEMPOOL_IP
@@ -58,6 +59,8 @@ services:
       LND_MACAROON_PATH: "/lnd/data/chain/bitcoin/$APP_BITCOIN_NETWORK/readonly.macaroon"
       LND_REST_API_URL: "https://$APP_LIGHTNING_NODE_IP:$APP_LIGHTNING_NODE_REST_PORT"
       LND_TIMEOUT: 120000
+      MEMPOOL_SERVICES_API: "https://mempool.space/api/v1/services"
+      MEMPOOL_SERVICES_ACCELERATIONS: true
     networks:
        default:
          ipv4_address: $APP_MEMPOOL_API_IP
