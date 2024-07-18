@@ -7,7 +7,7 @@ services:
       APP_PORT: 7000
       
   web:
-    image: balzack/databag:0.1.10@sha256:25d3fb6daa298f4ac4841929f759b0675502ae7c0fc4df28b2e6ee3a18186594
+    image: balzack/databag:0.1.15@sha256:bf8c2689fb91947a269ade9a1c1b90a259504a2c517487273228125a3ca5c5b5
     restart: on-failure
     stop_grace_period: 1m
     volumes:

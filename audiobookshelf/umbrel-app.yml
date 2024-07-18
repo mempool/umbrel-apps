@@ -3,7 +3,7 @@ id: audiobookshelf
 name: Audiobookshelf
 tagline: Audiobook and podcast server
 category: media
-version: "2.8.0"
+version: "2.11.0"
 port: 13378
 description: >-
   Features:
@@ -61,27 +61,74 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  This release brings audiobookshelf from version 2.7.1 to 2.8.0. 
+  This release brings audiobookshelf from version 2.9.0 to 2.11.0.
 
 
   Added
 
-  - Allow adding a custom message on login page (from auth config page)
+  - Create book share links with expiration (admin users only)
 
-  - Ability to add custom metadata providers (from item metadata utils) 
+  - Email settings option to enable/disable rejecting unauthorized certificates
 
-  - Crash logs are stored in /metadata/logs/crash_logs.txt
+  - Support for disabling SSRF request filter with env variable
 
-  - Portuguese (Brazil) translations
+  - Support for custom backup path on backups config page or with env variable
 
-  - Podcast library setting to set iTunes search region
+  - Epub ereader setting for font boldness
 
-  - OpenID: Edit user modal shows button to unlink user from OpenID
-  
+  - Finnish translations
 
-  Plus many fixes and changes...
 
-  
+  Fixed
+
+  - Casting podcast episodes
+
+  - Match all authors hitting rate limit
+
+  - Scheduled library scans using old copy of library
+
+  - Changing author name in edit author modal not updating metadata JSON files
+
+  - AB merge tool not working in Debian pkg due to ffmpeg v7
+
+  - Download file ssrfFilter URL
+
+  - Overdrive mediamarkers incorrect timestamp parsing
+
+  - Unhandled exception syncing user progress
+
+  - Server crash from library scanner race condition
+
+  - UI/UX: PDF reader flickering
+
+  - UI/UX: Audio player long author name overflowing
+
+  - UI/UX: Audio player long chapter name overflowing
+
+
+  Changed
+
+  - Replace Tone with Ffmpeg for embedding metadata
+
+  - Playback sessions are closed after 36 hours of inactivity
+
+  - User agent string for podcast RSS feed and file download requests
+
+  - Increased time delay between when watcher detects a file and when it scans the folder
+
+  - Prevent editing backup path if it is set using env variable
+
+  - UI/UX: Show publish date in changelog modal
+
+  - UI/UX: Chapters table "End" column changed to a "Duration" column
+
+  - UI/UX: Bookshelf refactor for consistent scaling
+
+  - UI/UX: Cleaner error page for 404s
+
+  - More strings translated
+
+
   Full release notes can be found at https://github.com/advplyr/audiobookshelf/releases
 submitter: Jasper
 submission: https://github.com/getumbrel/umbrel-apps/pull/302
