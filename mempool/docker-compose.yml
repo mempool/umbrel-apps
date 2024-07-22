@@ -20,6 +20,7 @@ services:
       NGINX_HOSTNAME: $APP_MEMPOOL_API_IP
       LIGHTNING_DETECTED_PORT: $APP_LIGHTNING_NODE_PORT
       ACCELERATOR: true
+      SERVICES_API: "https://mempool.space/api/v1/services"
     networks:
       default:
         ipv4_address: $APP_MEMPOOL_IP
