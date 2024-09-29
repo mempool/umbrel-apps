@@ -49,6 +49,7 @@ services:
       MEMPOOL_CACHE_DIR: "/backend/cache"
       MEMPOOL_CLEAR_PROTECTION_MINUTES: "20"
       MEMPOOL_INDEXING_BLOCKS_AMOUNT: "52560"
+      MEMPOOL_RUST_GBT: true
       MEMPOOL_STDOUT_LOG_MIN_PRIORITY: "info"
       LIGHTNING_ENABLED: "true"
       LIGHTNING_BACKEND: "lnd"
@@ -58,6 +59,7 @@ services:
       LND_MACAROON_PATH: "/lnd/data/chain/bitcoin/$APP_BITCOIN_NETWORK/readonly.macaroon"
       LND_REST_API_URL: "https://$APP_LIGHTNING_NODE_IP:$APP_LIGHTNING_NODE_REST_PORT"
       LND_TIMEOUT: 120000
+      NODE_OPTIONS: "--max-old-space-size=2048"
     networks:
        default:
          ipv4_address: $APP_MEMPOOL_API_IP
