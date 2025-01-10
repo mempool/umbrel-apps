@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   server:
-    image: homeassistant/home-assistant:2024.12.3@sha256:e20ca1d7b578cd98d6868aefa80ac2b4ade9826f14e10e3ea206975b8c6aeb8f
+    image: homeassistant/home-assistant:2025.1.1@sha256:dda88779889b09d5465b8bf0c69ba2a62f81b01ee74d943ebe31e3474ea7cbea
     network_mode: host
     # UI at default port 8123
     privileged: true

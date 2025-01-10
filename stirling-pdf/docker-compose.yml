@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_WHITELIST: "/api/*"
   
   app:
-    image: stirlingtools/stirling-pdf:0.36.2@sha256:7f92a892c41ba1309c8275e5c904d7867ccdd494d97af1bb0f92ec09b711babd
+    image: stirlingtools/stirling-pdf:0.36.6@sha256:05b680a2dfb127b31f4b4e3d04637bee2fd84e9005b96f0e32c639e61ca6039e
     # Stirling PDF does not work with a custom user
     #user: "1000:1000"
     restart: on-failure

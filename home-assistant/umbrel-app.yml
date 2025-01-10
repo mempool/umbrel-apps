@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: home-assistant
 category: automation
 name: Home Assistant
-version: "2024.12.3"
+version: "2025.1.1"
 tagline: Home automation that puts local control & privacy first
 description: >-
   Open source home automation that puts local control and privacy
@@ -40,13 +40,12 @@ torOnly: false
 permissions:
   - STORAGE_DOWNLOADS
 releaseNotes: >-
-  This release includes various improvements and bug fixes:
-    - Improved conversation and voice assistant capabilities
-    - Enhanced stability for Android TV integration
-    - Better handling of device connections and network requests
-    - Multiple UI improvements and bug fixes
+  This is a bugfix release.
 
 
-  Full release notes are available at https://github.com/home-assistant/core/releases/tag/2024.12.3
+  And in case you missing the last major release (2025.1.0), this brought a complete overhaul of the backup system in Home Assistant: automated backups, encrypted Home Assistant Cloud backup storage, retention policies, configuration wizards, and even the ability for integrations to offer backup storage locations.
+
+
+  Full release notes are available at https://www.home-assistant.io/blog/2025/01/03/release-20251/
 submitter: Umbrel
 submission: https://github.com/getumbrel/umbrel/commit/9d79cffae608c6a6ab077f859c1c531a581cf926
